@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <title>Users</title>
+</head>
+<body>
+
+<table class="table table-striped">
+    <thead>
+
+    <th>Login</th>
+    </thead>
+    <tr th:each="user:${users}">
+        <td th:text="${user.login}"></td>
+        <td th:text="${user.password}"></td>
+    </tr>
+
+
+</table>
+
+</body>
+</html>
